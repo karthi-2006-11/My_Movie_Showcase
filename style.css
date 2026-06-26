@@ -1,0 +1,219 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#c3cce7;
+    color:white;
+}
+
+header{
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+header p{
+    color:#cbd5e1;
+}
+
+#movieContainer{
+
+    width:90%;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+    padding:30px 0;
+}
+
+.card{
+
+    background:#1f2937;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+.card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.6);
+}
+
+.card img{
+
+    width:100%;
+
+    height:340px;
+
+    object-fit:cover;
+}
+
+.content{
+
+    padding:15px;
+}
+
+.content h2{
+
+    font-size:20px;
+
+    margin-bottom:10px;
+}
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-bottom:10px;
+}
+
+.tag{
+
+    background:#ef4444;
+
+    padding:5px 10px;
+
+    border-radius:30px;
+
+    font-size:12px;
+}
+
+.rating{
+
+    color:#facc15;
+
+    font-weight:bold;
+}
+
+
+#modal{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.8);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:100;
+}
+
+.modal-content{
+
+    width:700px;
+
+    max-width:90%;
+
+    background:#1f2937;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    animation:popup .4s ease;
+}
+
+@keyframes popup{
+
+from{
+
+transform:scale(.7);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+.modal-content img{
+
+width:100%;
+
+height:380px;
+
+object-fit:cover;
+}
+
+.modal-content h2{
+
+padding:20px 20px 10px;
+}
+
+.modal-content p{
+
+padding:5px 20px;
+}
+
+#close{
+
+position:absolute;
+
+right:30px;
+
+top:20px;
+
+font-size:35px;
+
+cursor:pointer;
+
+color:white;
+}
+
+@media(max-width:700px){
+
+.modal-content img{
+
+height:250px;
+
+}
+
+header h1{
+
+font-size:30px;
+
+}
+
+}
